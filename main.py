@@ -8,5 +8,5 @@ def unifran():
 @app.route('/unifran')
 def unifran2():
        return "<h2> Universidade de Franca </h2>"
-        
-app.run(host='0.0.0.0', port=8080)
+if __name__=='__main__':     
+  app.run(host='0.0.0.0', port=8080)
