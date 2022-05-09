@@ -1,13 +1,13 @@
-from flask import Flask
+from flask import Flask, render_template
 app = Flask('app')
 
 @app.route('/')
-def unifran():
-  return '<h1>Minha Primeira Rota!</h1>'
-     
-@app.route('/unifran')
-def unifran2():
-  return '<h2> Universidade de Franca </h2>'
+def index():
+  return render_template('index.html')
 
-if __name__=='__main__':     
-  app.run(host='0.0.0.0', port=8080)
+@app.route('/unifran')
+def unifran():
+  return render_template('unifran.html')
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
