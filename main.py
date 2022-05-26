@@ -1,13 +1,7 @@
-from flask import Flask, render_template
-app = Flask('app')
+from flask import Flask
 
-@app.route('/')
-def index():
-  return render_template('index.html')
+app = Flask(__name__)
 
-@app.route('/unifran')
-def unifran():
-  return render_template('unifran.html')
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+@app.route("/")
+def hello_world():
+    return "<h1>Minha primeira rota!!</h1>"
